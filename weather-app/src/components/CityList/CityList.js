@@ -4,11 +4,11 @@ import Grid from '@mui/material/Grid'
 import CityInfo from './../CityInfo'
 import Weather from './../Weather'
 
-const renderCityAndCountry = CityAndCountry => {
+const renderCityAndCountry = eventOnClickCity => CityAndCountry => {
     const { city, country } = CityAndCountry
     
     return (
-        <li key={city}>
+        <li key={city} onClick={eventOnClickCity} >
             <Grid container
                 justify="center"
                 alignItems="center"
@@ -26,11 +26,11 @@ const renderCityAndCountry = CityAndCountry => {
     )
 }
 
-const CityList = ({ cities }) => {
+const CityList = ({ cities, onClickCity }) => {
   return (
     <ul>
       {
-        cities.map(CityAndCountry => renderCityAndCountry(CityAndCountry))
+        cities.map(CityAndCountry => renderCityAndCountry(onClickCity)(CityAndCountry))
       }
     </ul>
   )
@@ -38,6 +38,7 @@ const CityList = ({ cities }) => {
 
 CityList.propTypes = {
     cities: PropTypes.array.isRequired,
+    onClickCity: PropTypes.func.isRequired,
 }
 
 export default CityList

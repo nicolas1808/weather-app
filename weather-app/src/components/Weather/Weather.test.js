@@ -17,7 +17,6 @@ test ("Weather render sunny", async () => {
 test ("Weather render rain", async () => {
     // AAA Arrange Act Assert
     
-
     const {findByRole} = render(<Weather temperature={10} state='rain' />)
 
     const temp = await findByRole("heading")
