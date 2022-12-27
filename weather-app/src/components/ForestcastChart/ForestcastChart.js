@@ -1,13 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, Legend } from 'recharts'
+import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer } from 'recharts'
 
 const ForestcastChart = ({ data }) => {
   return (
-    <div>
+    <ResponsiveContainer width={"95%"} height={250}>
         <LineChart 
-            width={700}
-            height={250}
             margin={{ top: 20, bottom: 20, left: 10, right:10}} 
             data={data}>
                 <CartesianGrid stroke="#ccc" />
@@ -18,7 +16,7 @@ const ForestcastChart = ({ data }) => {
                 <Line type="monotone" dataKey="max" stroke="#FF0000" />
                 <Line type="monotone" dataKey="min" stroke="#0000FF" />
         </LineChart>
-    </div>
+    </ResponsiveContainer>
   )
 }
 

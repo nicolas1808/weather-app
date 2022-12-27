@@ -15,7 +15,7 @@ const renderForestcastItem = forestcast => {
 const Forestcast = ({ ForestcastItemList }) => {
   return (
     <Grid container 
-        justifyContent="center"
+        justifyContent="space-around"
         alignItems="center">
             {
                 ForestcastItemList.map( forestcast => renderForestcastItem(forestcast))
