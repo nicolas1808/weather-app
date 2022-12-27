@@ -8,32 +8,24 @@ import NotFoundPage from './pages/NotFoundPage'
 
 const App = props => {
   return (
-    <Grid container
-        justifyContent="center"
-        direction="row">
-        <Grid item
-            xs={12}
-            sm={11}
-            md={10}
-            lg={8}>
-            <Router>
-                <Switch>
-                    <Route exact path="/">
-                        <Welcome />
-                    </Route>
-                    <Route path="/main">
-                        <MainPage />
-                    </Route>
-                    <Route path="/city">
-                        <CityPage />
-                    </Route>
-                    <Route>
-                        <NotFoundPage />
-                    </Route>
-                </Switch>
-            </Router>
-        </Grid>
-    </Grid>
+
+    <Router>
+        <Switch>
+            <Route exact path="/">
+                <Welcome />
+            </Route>
+            <Route path="/main">
+                <MainPage />
+            </Route>
+            <Route path="/city">
+                <CityPage />
+            </Route>
+            <Route>
+                <NotFoundPage />
+            </Route>
+        </Switch>
+    </Router>
+
   )
 }
 

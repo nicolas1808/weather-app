@@ -1,11 +1,11 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { Grid } from '@mui/material'
 import CityInfo from '../components/CityInfo'
 import Weather from '../components/Weather'
 import WeatherDetails from '../components/WeatherDetails'
 import ForestcastChart from '../components/ForestcastChart'
 import Forestcast from '../components/Forescast/Forestcast'
+import AppFrame from '../components/AppFrame'
 
 const dataExample = [
   {
@@ -61,10 +61,11 @@ const CityPage = () => {
   const forescastItemList = forescastItemListExample
 
   return (
-    <Grid container
-      justifyContent="center"
-      direction="column"
-      spacing={2}>
+    <AppFrame>
+      <Grid container
+        justifyContent="center"
+        direction="column"
+        spacing={2}>
         <Grid item container
           justifyContent="center"
           alignItems="flex-end"
@@ -82,7 +83,8 @@ const CityPage = () => {
         <Grid item >
           <Forestcast ForestcastItemList={forescastItemList} />
         </Grid>
-    </Grid>
+      </Grid>
+    </AppFrame>
   )
 }
 
