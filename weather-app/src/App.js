@@ -1,6 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
-import { Grid } from '@mui/material'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Welcome from './pages/Welcome'
 import MainPage from './pages/MainPage'
 import CityPage from './pages/CityPage'
@@ -25,7 +24,6 @@ const App = props => {
             </Route>
         </Switch>
     </Router>
-
   )
 }
 

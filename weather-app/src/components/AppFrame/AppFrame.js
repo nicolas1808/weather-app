@@ -12,7 +12,7 @@ const AppFrame = ({children}) => {
         <AppBar position='static'>
             <Toolbar variant='dense'>
                 <IconButton color='inherit' aria-label='menu' >
-                    <Link top="/main" color="inherit" aria-label="menu" component={LinkRouter}>
+                    <Link to="/main" color="inherit" aria-label="menu" component={LinkRouter}>
                         <IconContext.Provider value={{size:'2em'}}>
                             <WiDaySunny />
                         </IconContext.Provider>
